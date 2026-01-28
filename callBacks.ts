@@ -78,33 +78,31 @@ performOperation();
 
 
 //Write one function that can do addition, subtraction, multiplication, and division. It should take two numbers, an operation string, and a callback. 
-const calculator = () => {
-    const num1 = 20;
-    const num2 = 4;
-    const operations = ["add", "subtract", "multiply", "divide"];
-    for (const operation of operations) {
-    if (operation === "add"){
-        const result = num1 + num2;
-        console.log(`Addition Result: ${result}`);
+const calculator = (num1: number, num2: number, operation: string, callback: (result: number) => 
+    void) => {
+    
+    if (operation === "add") {
+        callback(num1 + num2);
     }
-}    for (const operation of operations) {
-    if (operation === "subtract"){
-        const result = num1 - num2;
-        console.log(`Subtraction Result: ${result}`);
+    if (operation === "subtract") {
+        callback(num1 - num2);
     }
-}  for( const operation of operations) {
-    if (operation === "multiply"){
-        const result = num1 * num2;
-        console.log(`Multiplication Result: ${result}`);
+    if (operation === "multiply") {
+        callback(num1 * num2);
     }
-}    for (const operation of operations) {
-    if (operation === "divide"){
-        const result = num1 / num2;
-        console.log(`Division Result: ${result}`);
+    if (operation === "divide") {
+        callback(num1 / num2);
     }
+    
 }
-}
-calculator();
+
+calculator(10, 5, "add", (result) => {
+    console.log(`Addition Result: ${result}`);
+});
+
+calculator(10, 5, "subtract", (result) => {
+    console.log(`Subtraction Result: ${result}`);
+});
 
 
 
