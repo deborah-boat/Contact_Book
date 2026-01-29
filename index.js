@@ -4,7 +4,7 @@
 
 // DATASETS
 // --------
-
+/*
 interface Student {
   name: string;
   age: number;
@@ -153,3 +153,49 @@ inStockProduct();
 // and returns only scholarship students above that grade, sorted by grade (highest first)
 // Hint: Combine filter() and sort()
 // Your code here:
+
+
+
+
+
+
+
+
+
+
+
+/*Create a function called calculator(a, b, operator) that returns the result of:  
+- a + b if operator is "add"  
+- a - b if operator is "subtract"  
+- a * b if operator is "multiply"  
+- a / b if operator is "divide"  
+Test it with all four operators.  */
+
+const calculator = (a, b, operator) => {
+    if (operator === "add") {
+        return a + b;
+    } else if (operator === "subtract") {
+        return a - b;
+    } else if (operator === "multiply") {
+        return a * b;
+    } else if (operator === "divide") {
+        return a / b;
+    } else {
+        return "Invalid operator";
+    }
+};
+
+// Testing all four operators
+console.log(calculator(10, 5, "add"));       
+console.log(calculator(10, 5, "subtract"));  
+console.log(calculator(10, 5, "multiply"));  
+console.log(calculator(10, 5, "divide"));    
+
+
+
+
+
+
+
+
+
