@@ -118,7 +118,7 @@ const handleCommand = (command: string): void => {
       rl.close();
       break;
     default:
-      console.log("Unknown command\n");
+      console.log("Unknown command!\n");
       showMenu();
   }
 };
@@ -128,9 +128,10 @@ const showMenu = (): void => {
   //console.clear();
   console.log("\n=== Mood Todo App ===");
   console.log("Commands: add, list, update, remove, exit\n");
-  process.stdout.write("> ");
+  //process.stdout.write("> ");
   rl.question(">", handleCommand);
 };
+
 
 // START
 showMenu();
